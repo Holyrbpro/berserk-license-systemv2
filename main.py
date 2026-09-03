@@ -8,7 +8,12 @@ import discord
 from discord.ext import commands
 
 # ==================== CONFIGURACIÓN ====================
-TOKEN_DISCORD = "MTU0NDg1NTEzNzA5MTE5NDkzMA.GQx0gR.FFEKQF3AQ_TO9r-rTuV0GORVKUcRvN0l005OF4"  # <--- REEMPLAZA CON EL TOKEN DE TU BOT
+# LEER EL TOKEN DESDE VARIABLES DE ENTORNO (SEGURO)
+TOKEN_DISCORD = os.environ.get("DISCORD_TOKEN")
+if not TOKEN_DISCORD:
+    raise ValueError("❌ No se encontró la variable de entorno DISCORD_TOKEN. Configúrala en Render.")
+
+# ADMIN_IDS (puedes dejar el tuyo o usar variable de entorno también)
 ADMIN_IDS = [447506915174645760]  # <--- REEMPLAZA CON TU ID DE USUARIO DE DISCORD
 
 app = Flask(__name__)

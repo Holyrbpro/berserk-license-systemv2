@@ -9,7 +9,7 @@ from discord.ext import commands
 
 # ==================== CONFIGURACIÓN ====================
 # LEER EL TOKEN DESDE VARIABLES DE ENTORNO (SEGURO)
-TOKEN_DISCORD = os.environ.get("MTU0NDg1NTEzNzA5MTE5NDkzMA.Goiq7N.fDpaOdt4IoLjsXyQ39SYwyOitIXEzH0aVGZqjo")
+TOKEN_DISCORD = os.environ.get("DISCORD_TOKEN")
 if not TOKEN_DISCORD:
     raise ValueError("❌ No se encontró la variable de entorno DISCORD_TOKEN. Configúrala en Render.")
 
